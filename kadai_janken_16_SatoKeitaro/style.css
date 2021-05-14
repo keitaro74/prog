@@ -1,0 +1,41 @@
+.list {
+    list-style: none;
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+.rock,
+button.rock {
+  color: #fff;
+  background-color: #eb6100;
+}
+.rock:hover,
+button.rock:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.scissors,
+button.scissors {
+  color: #fff;
+  background-color: #eb6100;
+}
+.scissors:hover,
+button.scissors:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.paper,
+button.paper {
+  color: #fff;
+  background-color: #eb6100;
+}
+.paper:hover,
+button.paper:hover {
+  color: #fff;
+  background: #f56500;
+}

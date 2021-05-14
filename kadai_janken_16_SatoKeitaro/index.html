@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ジャンケン</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ジャンケン</h1>
+    </header>
+
+    <main>
+        <!--<button type="button" id="start">ジャンケンを始める</button>-->
+        <p>最初はグー、ジャンケン...</p>
+
+        <div class="result"></div>
+        
+        <ul class=list>
+            <li><button type="button" class="rock">グー</button></li>
+            <li><button type="button" class="scissors">チョキ</button></li>
+            <li><button type="button" class="paper">パー</button></li>
+        </ul>
+
+    </main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        win = '<p>おめでとう！君の勝ち！</p>';
+        lose = '<p>君の負け。明日までになんで負けたか考えておいてください。</p>';
+        draw = '<p>あいこで...</p>';
+
+        /*「ジャンケンを始める」をクリックした後*/
+        /*グーが押された場合*/
+        $(".rock").on("click",function(){
+            enemy = Math.floor(Math.random()*3+1);
+            console.log(enemy);
+            if(enemy==1){
+                $(".result").append(draw);
+                $(".result").append('<img src="img/rock.png" alt="">');
+            }else if(enemy==2){
+                $(".result").append(win);
+                $(".result").append('<img src="img/win.jpg" alt="">');
+            }else if(enemy==3){
+                $(".result").append(lose);
+                $(".result").append('<img src="img/lose.jpg" alt="">');
+            }
+        });
+        
+        /*チョキが押された場合*/
+        $(".scissors").on("click",function(){
+            enemy = Math.floor(Math.random()*3+1);
+            console.log(enemy);
+            if(enemy==1){
+                $(".result").append(lose);
+                $(".result").append('<img src="img/lose.jpg" alt="">');
+            }else if(enemy==2){
+                $(".result").append(draw);
+                $(".result").append('<img src="img/scissors.png" alt="">');
+            }else if(enemy==3){
+                $(".result").append(win);
+                $(".result").append('<img src="img/win.jpg" alt="">');
+            }
+        });
+
+        /*パーが押された場合*/
+        $(".paper").on("click",function(){
+            enemy = Math.floor(Math.random()*3+1);
+            console.log(enemy);
+            if(enemy==1){
+                $(".result").append(win);
+                $(".result").append('<img src="img/win.jpg" alt="">');
+            }else if(enemy==2){
+                $(".result").append(lose);
+                $(".result").append('<img src="img/lose.jpg" alt="">');
+            }else if(enemy==3){
+                $(".result").append(draw);
+                $(".result").append('<img src="img/paper.png" alt="">');
+            }
+        });
+
+    </script>
+</body>
+</html>
