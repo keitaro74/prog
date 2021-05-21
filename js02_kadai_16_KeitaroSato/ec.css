@@ -1,0 +1,92 @@
+body{
+    background-image: url("img/backgroundimage.jpeg");
+    background-size: contain;
+}
+
+.menu{
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.menu li{
+    padding: 30px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productlist{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.productlist li{
+    padding: 20px;
+    background-color: ghostwhite;    
+}
+
+.like1{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like1:hover{
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.like2{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like2:hover{
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.like3{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like3:hover{
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.like4{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like4:hover {
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+#clear{
+    width: 165px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+#clear:hover{
+    width: 165px;
+    color: #fff;
+    background: #000;
+}

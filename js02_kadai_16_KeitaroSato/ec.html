@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ec.css">
+</head>
+<body>
+    <header>
+        <h1>FENNEC CRAFTWORK</h1>
+
+        <nav>
+            <ul class="menu">
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- about -->
+        <section class="about">
+            <h2>作り手の想いを世界に伝える</h2>
+            <p>フェネックは全国の手作りを応援します</p>
+            <p>製作者と応援する人を繋ぐマッチングシステム</p>
+        </section>
+        
+        <!-- matching -->
+        <section>
+            <ul class="productlist">
+                <li class="list1">
+                    <p class="product1">product1</p>
+                    <p class="name1">name1</p>
+                    <img src="img/cup.jpeg" alt="">
+                    <p class="like1">いいね！</p>
+                </li>
+                <li class="list2">
+                    <p class="product2">product2</p>
+                    <p class="name2">name2</p>
+                    <img src="img/pot.jpeg" alt="">
+                    <p class="like2">いいね！</p>
+                </li>
+                <li class="list3">
+                    <p class="product3">product3</p>
+                    <p class="name3">name3</p>
+                    <img src="img/lunchbox.jpeg" alt="">
+                    <p class="like3">いいね！</p>
+                </li>
+                <li class="list4">
+                    <p class="product4">product4</p>
+                    <p class="name4">name4</p>
+                    <img src="img/dish.jpeg" alt="">
+                    <p class="like4">いいね！</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- your like -->
+        <section>
+            <h2>あなたのお気に入り</h2>
+            <p id="clear">お気に入りを削除する</p>
+            <table id="list">
+            <!--お気に入りがここに挿入される-->
+            </table>
+        </section>
+
+        <!-- contact -->
+        <section>
+            <h2>ご質問・ご要望はこちらまで</h2>
+            <dl>
+                <form action="#" method="POST">
+                    <dt>お名前</dt>
+                    <dd><input type="text" name="name"></dd>
+                    <dt>メールアドレス</dt>
+                    <dd><input type="email" name="email" id=""></dd>
+                    <dt>お問い合わせ内容</dt>
+                    <dd><textarea name="detail" id="" cols="30" rows="10"></textarea></dd>
+                    <input type="submit" name="" id="" value="送信">
+                </form>
+            </dl>
+        </section>
+
+
+    </main>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    //ひとつめ
+    $(".like1").on("click", function(){
+        //通知
+        alert("「あなたのお気に入り」に保存されました！");
+
+        var product1 = "product1";
+        var name1 = "name1";
+
+        //リストに表示
+        console.log(product1);
+        console.log(name1);
+        const html = '<tr><td>' + product1 + '</td><td>' + name1 + '</td></tr>';
+        $("#list").append(html);
+
+        //ローカルストレージに登録
+        localStorage.setItem('product1', 'name1');
+    });
+
+    //ふたつめ
+    $(".like2").on("click", function(){
+        //通知
+        alert("「あなたのお気に入り」に保存されました！");
+
+        var product2 = "product2";
+        var name2 = "name2";
+
+        //リストに表示
+        console.log(product2);
+        console.log(name2);
+        const html = '<tr><td>' + product2 + '</td><td>' + name2 + '</td></tr>';
+        $("#list").append(html);
+
+        //ローカルストレージに登録
+        localStorage.setItem('product2', 'name2');
+    });
+
+    //みっつめ
+    $(".like3").on("click", function(){
+        //通知
+        alert("「あなたのお気に入り」に保存されました！");
+
+        var product3 = "product3";
+        var name3 = "name3";
+
+        //リストに表示
+        console.log(product3);
+        console.log(name3);
+        const html = '<tr><td>' + product3 + '</td><td>' + name3 + '</td></tr>';
+        $("#list").append(html);
+
+        //ローカルストレージに登録
+        localStorage.setItem('product3', 'name3');
+    });
+
+    //よっつめ
+    $(".like4").on("click", function(){
+        //通知
+        alert("「あなたのお気に入り」に保存されました！");
+
+        var product4 = "product4";
+        var name4 = "name4";
+
+        //リストに表示
+        console.log(product4);
+        console.log(name4);
+        const html = '<tr><td>' + product4 + '</td><td>' + name4 + '</td></tr>';
+        $("#list").append(html);
+
+        //ローカルストレージに登録
+        localStorage.setItem('product4', 'name4');
+    });
+
+    //お気に入り削除
+    $("#clear").on("click", function(){
+        localStorage.clear();
+        $("#list").empty();
+    });
+
+    //お気に入りリスト読み込み
+    for(let i = 0; i < localStorage.length; i ++){
+        //key(何番)でkey名を取得
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+
+        const html = '<tr><th>' + key + '</th><td>' + value + '</td></tr>';
+        $("#list").append(html);
+    }
+
+</script>
+    
+</body>
+</html>
