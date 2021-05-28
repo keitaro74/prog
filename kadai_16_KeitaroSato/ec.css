@@ -1,0 +1,157 @@
+body{
+    background-image: url("img/woodwall.jpg");
+    background-size: contain;
+}
+
+header {
+    color: cornsilk;
+}
+
+.menu{
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.menu li{
+    padding: 30px;
+}
+
+.about{
+    color: cornsilk;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productlist{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.productlist li{
+    width: 300px;
+    padding: 20px;
+    background-color: ghostwhite;    
+}
+
+.like1{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like1:hover{
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.like2{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like2:hover{
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.like3{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like3:hover{
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.like4{
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+.like4:hover {
+    width: 70px;
+    color: #fff;
+    background: #000;
+}
+
+.yourlike {
+    color: cornsilk;
+}
+
+#clear{
+    width: 165px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+    color: black;
+}
+#clear:hover{
+    width: 165px;
+    color: #fff;
+    background: #000;
+}
+
+.chatsection {
+    color: cornsilk;
+}
+
+#chatclear {
+    width: 285px;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+#chatclear:hover{
+    width: 285px;
+    color: #fff;
+    background: #000;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+}
+#chat:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e0edff;
+}
+#chat p {
+    margin: 0;
+    padding: 0;
+}
+
+.contact {
+    color: cornsilk;
+}
+
+.form {
+    color: cornsilk;
+}
