@@ -69,7 +69,7 @@
 
         <!-- chat -->
         <section class="chatsection">
-            <h2>チャット</h2>
+            <h2 class="chattitle">チャット</h2>
 
             <!-- チャット削除 -->
             <div>
@@ -89,7 +89,10 @@
 
             <!-- 送信ボタン -->
             <div>
-                <button id="send">送信</button>
+                <button id="send">日本語で送信</button>
+            </div>
+            <div>
+                <button id="sendEN">英語で送信</button>
             </div>
 
         </section>
@@ -252,7 +255,8 @@
 
       //ここでデータをhtmlに埋め込む
       $("#output").append(str);
-    })
+    });
+
 
     $("#text").on("keydown", function (e) {
       console.log(e, 'データの塊');
@@ -267,14 +271,13 @@
         $("#username").val("");  //空にする
       }
 
-    })
+    });
 
     //チャットを消去する（できてない）
-    $("#chatclear").on("click", function(){
-
-
+    $("#chatclear").on("click", function () {
+        newPostRef.remove();
     });
-  </script>
+</script>
     
 </body>
 </html>
